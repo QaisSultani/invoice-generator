@@ -227,10 +227,10 @@ export default function InvoiceForm({ onSubmit }: InvoiceFormProps) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Invoice Details */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-900">
+        <fieldset className="space-y-4">
+          <legend className="text-lg font-semibold text-gray-900">
             Invoice Details
-          </h3>
+          </legend>
 
           <div>
             <label className="block text-sm font-medium text-gray-800 mb-1">
@@ -251,6 +251,7 @@ export default function InvoiceForm({ onSubmit }: InvoiceFormProps) {
                 onClick={handleGenerateNewInvoiceNumber}
                 className="px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200 text-sm font-medium"
                 title="Generate new invoice number"
+                aria-label="Generate new invoice number"
               >
                 🔄
               </button>
@@ -287,13 +288,13 @@ export default function InvoiceForm({ onSubmit }: InvoiceFormProps) {
               required
             />
           </div>
-        </div>
+        </fieldset>
 
         {/* Contractor Information */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-900">
+        <fieldset className="space-y-4">
+          <legend className="text-lg font-semibold text-gray-900">
             Your Information
-          </h3>
+          </legend>
 
           <div>
             <label className="block text-sm font-medium text-gray-800 mb-1">
@@ -354,13 +355,13 @@ export default function InvoiceForm({ onSubmit }: InvoiceFormProps) {
               required
             />
           </div>
-        </div>
+        </fieldset>
 
         {/* Client Information */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-900">
+        <fieldset className="space-y-4">
+          <legend className="text-lg font-semibold text-gray-900">
             Client Information
-          </h3>
+          </legend>
 
           <div>
             <label className="block text-sm font-medium text-gray-800 mb-1">
@@ -406,13 +407,13 @@ export default function InvoiceForm({ onSubmit }: InvoiceFormProps) {
               required
             />
           </div>
-        </div>
+        </fieldset>
 
         {/* Service Information */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-900">
+        <fieldset className="space-y-4">
+          <legend className="text-lg font-semibold text-gray-900">
             Service Information
-          </h3>
+          </legend>
 
           <div>
             <label className="block text-sm font-medium text-gray-800 mb-1">
@@ -506,13 +507,13 @@ export default function InvoiceForm({ onSubmit }: InvoiceFormProps) {
               </select>
             </div>
           </div>
-        </div>
+        </fieldset>
 
         {/* Payment Information */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-900">
+        <fieldset className="space-y-4">
+          <legend className="text-lg font-semibold text-gray-900">
             Payment Information
-          </h3>
+          </legend>
 
           <div>
             <label className="block text-sm font-medium text-gray-800 mb-1">
@@ -542,7 +543,7 @@ export default function InvoiceForm({ onSubmit }: InvoiceFormProps) {
               className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             />
           </div>
-        </div>
+        </fieldset>
       </div>
 
       <div className="mt-8">

@@ -128,6 +128,7 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
           <button
             onClick={onBack}
             className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-800 border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200"
+            aria-label="Go back to invoice form"
           >
             ← Back to Form
           </button>
@@ -364,6 +365,7 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
                     <button
                       onClick={handleEditEmail}
                       className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition duration-200 font-medium text-sm"
+                      aria-label="Edit email template"
                     >
                       ✏️ Edit
                     </button>
@@ -372,12 +374,14 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
                       <button
                         onClick={handleCancelEdit}
                         className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition duration-200 font-medium text-sm"
+                        aria-label="Cancel email editing"
                       >
                         Cancel
                       </button>
                       <button
                         onClick={handleSaveEmail}
                         className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition duration-200 font-medium text-sm"
+                        aria-label="Apply email changes"
                       >
                         ✓ Apply Changes
                       </button>
@@ -400,6 +404,7 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
                     <button
                       onClick={() => copyToClipboard(emailTemplate.recipients.join(', '), 'Recipients')}
                       className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs font-medium transition duration-200"
+                      aria-label="Copy recipients to clipboard"
                     >
                       📋 Copy
                     </button>
@@ -410,17 +415,24 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
                     <div className="space-y-2">
                       {customRecipients.map((recipient, index) => (
                         <div key={index} className="flex gap-2">
+                          <label className="sr-only" htmlFor={`recipient-${index}`}>
+                            Email recipient {index + 1}
+                          </label>
                           <input
+                            id={`recipient-${index}`}
                             type="email"
                             value={recipient}
                             onChange={(e) => handleRecipientChange(index, e.target.value)}
                             className="flex-1 p-2 border border-blue-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm text-gray-900"
                             placeholder="email@example.com"
+                            aria-label={`Email recipient ${index + 1}`}
                           />
                           {customRecipients.length > 1 && (
                             <button
                               onClick={() => handleRemoveRecipient(index)}
                               className="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-md text-xs transition duration-200"
+                              aria-label={`Remove recipient ${index + 1}`}
+                              title={`Remove recipient ${index + 1}`}
                             >
                               ✕
                             </button>
@@ -430,6 +442,7 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
                       <button
                         onClick={handleAddRecipient}
                         className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-xs font-medium transition duration-200"
+                        aria-label="Add another email recipient"
                       >
                         ➕ Add Recipient
                       </button>
@@ -453,6 +466,7 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
                     <button
                       onClick={() => copyToClipboard(emailTemplate.subject, 'Subject')}
                       className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-medium transition duration-200"
+                      aria-label="Copy subject to clipboard"
                     >
                       📋 Copy
                     </button>
@@ -460,13 +474,20 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
                 </div>
                 <div className="p-4">
                   {isEditingEmail ? (
-                    <input
-                      type="text"
-                      value={customSubject}
-                      onChange={(e) => setCustomSubject(e.target.value)}
-                      className="w-full p-3 border border-green-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm text-gray-900"
-                      placeholder="Enter custom subject line..."
-                    />
+                    <>
+                      <label htmlFor="email-subject" className="sr-only">
+                        Email subject line
+                      </label>
+                      <input
+                        id="email-subject"
+                        type="text"
+                        value={customSubject}
+                        onChange={(e) => setCustomSubject(e.target.value)}
+                        className="w-full p-3 border border-green-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm text-gray-900"
+                        placeholder="Enter custom subject line..."
+                        aria-label="Email subject line"
+                      />
+                    </>
                   ) : (
                     <p className="text-sm text-green-900 font-mono bg-white p-3 rounded border">
                       {emailTemplate.subject}
@@ -486,6 +507,7 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
                     <button
                       onClick={() => copyToClipboard(emailTemplate.body, 'Email Body')}
                       className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-xs font-medium transition duration-200"
+                      aria-label="Copy email body to clipboard"
                     >
                       📋 Copy
                     </button>
@@ -493,13 +515,20 @@ export default function InvoicePreview({ invoiceData, onBack }: InvoicePreviewPr
                 </div>
                 <div className="p-4">
                   {isEditingEmail ? (
-                    <textarea
-                      value={customBody}
-                      onChange={(e) => setCustomBody(e.target.value)}
-                      rows={12}
-                      className="w-full p-3 border border-purple-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm font-mono leading-relaxed resize-vertical text-gray-900"
-                      placeholder="Enter custom email body..."
-                    />
+                    <>
+                      <label htmlFor="email-body" className="sr-only">
+                        Email body content
+                      </label>
+                      <textarea
+                        id="email-body"
+                        value={customBody}
+                        onChange={(e) => setCustomBody(e.target.value)}
+                        rows={12}
+                        className="w-full p-3 border border-purple-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm font-mono leading-relaxed resize-vertical text-gray-900"
+                        placeholder="Enter custom email body..."
+                        aria-label="Email body content"
+                      />
+                    </>
                   ) : (
                     <div className="bg-white p-4 rounded border max-h-64 overflow-y-auto">
                       <pre className="whitespace-pre-wrap text-sm text-purple-900 font-mono leading-relaxed">
