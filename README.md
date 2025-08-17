@@ -2,6 +2,10 @@
 
 A modern, full-featured invoice generator built with Next.js 14, TypeScript, and Puppeteer. Creates beautiful PDF invoices with automatic numbering, form persistence, and email template generation.
 
+## 🚀 Live Demo
+
+**[Try it now: https://invoice-generator-professional.vercel.app/](https://invoice-generator-professional.vercel.app/)**
+
 ## ✨ Features
 
 - 🧾 **Professional Invoice Design** - Beautiful, responsive layout with gradients and modern styling
@@ -19,7 +23,7 @@ A modern, full-featured invoice generator built with Next.js 14, TypeScript, and
 
 ### 1. Clone and Install
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/QaisSultani/invoice-generator.git
 cd invoice-generator
 npm install
 ```
@@ -60,6 +64,19 @@ npm run dev
 ```
 
 Visit `http://localhost:3000` to start creating invoices!
+
+## 🌐 Live Application
+
+The application is deployed and ready to use at:
+**[https://invoice-generator-professional.vercel.app/](https://invoice-generator-professional.vercel.app/)**
+
+### 📱 What You Can Do
+- ✅ Create professional invoices instantly
+- ✅ Download high-quality PDF invoices
+- ✅ Generate Gmail-ready email templates
+- ✅ Auto-save your contact information
+- ✅ Customize recipients, subject, and email body
+- ✅ Automatic invoice numbering
 
 ## 🎯 How It Works
 
@@ -113,9 +130,14 @@ Visit `http://localhost:3000` to start creating invoices!
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect repository to Vercel
+This project is already deployed and live at:
+**[https://invoice-generator-professional.vercel.app/](https://invoice-generator-professional.vercel.app/)**
+
+### Deploy Your Own Version
+
+#### Vercel (Recommended)
+1. Fork this repository: [https://github.com/QaisSultani/invoice-generator](https://github.com/QaisSultani/invoice-generator)
+2. Connect your forked repository to Vercel
 3. Add environment variables in Vercel dashboard
 4. Deploy automatically
 
@@ -185,7 +207,21 @@ MIT License - Free for personal and commercial use.
 
 ## 🤝 Contributing
 
-Contributions welcome! Please feel free to submit a Pull Request.
+Contributions welcome! Please feel free to submit a Pull Request to the main repository:
+**[https://github.com/QaisSultani/invoice-generator](https://github.com/QaisSultani/invoice-generator)**
+
+### How to Contribute
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 🔗 Links
+
+- **🌐 Live Demo**: [https://invoice-generator-professional.vercel.app/](https://invoice-generator-professional.vercel.app/)
+- **📦 Repository**: [https://github.com/QaisSultani/invoice-generator](https://github.com/QaisSultani/invoice-generator)
+- **🐛 Issues**: [https://github.com/QaisSultani/invoice-generator/issues](https://github.com/QaisSultani/invoice-generator/issues)
 
 ---
 
