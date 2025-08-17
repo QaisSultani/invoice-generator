@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block access to API routes from crawlers
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://invoice-generator-professional.vercel.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

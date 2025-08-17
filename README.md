@@ -217,7 +217,19 @@ Contributions welcome! Please feel free to submit a Pull Request to the main rep
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 🔗 Links
+## 👨‍💻 About the Developer
+
+**Muhammad Qais Sultani** - Full Stack Developer specializing in Next.js, React, and modern web technologies.
+
+### 🔗 Professional Links
+- **🌐 Portfolio**: [portfolio-qaissultanis-projects.vercel.app](https://portfolio-qaissultanis-projects.vercel.app/)
+- **💼 LinkedIn**: [muhammad-qais-sultani](https://www.linkedin.com/in/muhammad-qais-sultani/)
+- **👨‍💻 GitHub**: [QaisSultani](https://github.com/QaisSultani)
+- **💼 Upwork**: [qaissultani](https://www.upwork.com/freelancers/qaissultani)
+
+*Available for freelance projects and full-time opportunities in web development.*
+
+## 🔗 Project Links
 
 - **🌐 Live Demo**: [https://invoice-generator-professional.vercel.app/](https://invoice-generator-professional.vercel.app/)
 - **📦 Repository**: [https://github.com/QaisSultani/invoice-generator](https://github.com/QaisSultani/invoice-generator)

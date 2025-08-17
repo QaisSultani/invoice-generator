@@ -188,9 +188,14 @@ export default function InvoiceForm({ onSubmit }: InvoiceFormProps) {
       onSubmit={handleSubmit}
       className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg"
     >
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">
-        Invoice Generator
-      </h2>
+      <header className="mb-6">
+        <h2 className="text-2xl font-bold text-gray-800">
+          Create Professional Invoice
+        </h2>
+        <p className="text-gray-600 mt-2">
+          Fill out the form below to generate a professional PDF invoice with automatic numbering and email templates.
+        </p>
+      </header>
 
       {/* Saved Data Notification */}
       {hasSavedData && lastSavedDate && (
